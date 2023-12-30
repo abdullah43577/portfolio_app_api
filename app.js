@@ -19,7 +19,11 @@ app.use(
     credentials: true,
   })
 ); // allows requests from all origins
-app.use(compression());
+app.use(
+  compression({
+    priority: ['gzip', 'br'],
+  })
+);
 
 const dbURI = `mongodb+srv://officialayo540:${PASSWORD}@portfoliocluster.fk9auvg.mongodb.net/portfolio_projects`;
 
