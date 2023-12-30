@@ -21,7 +21,14 @@ app.use(
 ); // allows requests from all origins
 app.use(
   compression({
-    priority: ['gzip', 'br'],
+    level: 6,
+    threshold: 0, // only compresses data if the byte size is greater than this value
+    filter: (req, res) => {
+      if (req.headers['x-no-compression']) {
+        return false;
+      }
+      return compression.filter(req, res);
+    },
   })
 );
 
