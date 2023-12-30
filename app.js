@@ -6,6 +6,7 @@ const cors = require('cors');
 const PORT = process.env.PORT || 5000;
 const router = require('./routes/router');
 const { PASSWORD } = process.env;
+const compression = require('compression');
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(
     credentials: true,
   })
 ); // allows requests from all origins
+app.use(compression());
 
 const dbURI = `mongodb+srv://officialayo540:${PASSWORD}@portfoliocluster.fk9auvg.mongodb.net/portfolio_projects`;
 

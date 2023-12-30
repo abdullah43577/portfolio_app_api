@@ -1,5 +1,18 @@
 const data = [
   {
+    id: 0,
+    title: 'Mnemonics - (WIP)',
+    tagline: 'Mnemonics Web App',
+    description:
+      'designed to help you create memorable mnemonic phrases instantly. Whether you need a secure and unique password, a creative learning aid, or a personalized memory jogger, this project has you covered. Enjoy the convenience of generating customized mnemonics on the fly, making it easier than ever to remember important information effortlessly.',
+    liveURL: 'https://mnemonics-generator.netlify.app/',
+    githubURL: 'https://github.com/abdullah43577/mnemonics',
+    techStacks: ['React', 'Redux Toolkit', 'TailwindCSS', 'NodeJS'],
+    logo: 'https://res.cloudinary.com/dpmyh7ucr/image/upload/v1703949352/Screenshot_2023-12-30_161143_l2mvid.png',
+    screenshot: 'https://res.cloudinary.com/dpmyh7ucr/image/upload/v1703949275/screencapture-localhost-5173-2023-12-30-16_12_45_emzela.png',
+  },
+
+  {
     id: 1,
     title: 'Flicks on Demand',
     tagline: 'Movie Entertainment Web App',

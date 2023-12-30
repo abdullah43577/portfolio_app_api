@@ -5,20 +5,21 @@ const api_test = (req, res) => {
   res.status(200).json({ message: 'Welcome to the API server!' });
 };
 
-// const save_projects = async (req, res) => {
-//   try {
-//     //loop and save projects data to DB
+const save_projects = async (req, res) => {
+  try {
+    //loop and save projects data to DB
+    let newProject;
 
-//     data.forEach(async (project) => {
-//       newProject = new Project(project);
-//       await newProject.save();
-//     });
+    data.forEach(async (project) => {
+      newProject = new Project(project);
+      await newProject.save();
+    });
 
-//     res.status(200).json({ message: 'Projects saved to DB' });
-//   } catch (err) {
-//     console.log(err);
-//   }
-// };
+    res.status(200).json({ message: 'Projects saved to DB' });
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 const get_projects = async (req, res) => {
   try {
@@ -41,4 +42,14 @@ const get_single_project = async (req, res) => {
   }
 };
 
-module.exports = { api_test, get_projects, get_single_project };
+const delete_all_project = async (req, res) => {
+  try {
+    await Project.deleteMany({});
+    res.status(200).json({ message: 'All projects deleted' });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+};
+
+module.exports = { api_test, get_projects, get_single_project, save_projects, delete_all_project };
