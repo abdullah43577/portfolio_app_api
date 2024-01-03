@@ -1,5 +1,6 @@
 const data = require('../projects');
 const Project = require('../model/projectSchema');
+const client = require('../config/redisConfig');
 
 const api_test = (req, res) => {
   res.status(200).json({ message: 'Welcome to the API server!' });
@@ -23,18 +24,25 @@ const save_projects = async (req, res) => {
 
 const get_projects = async (req, res) => {
   try {
-    //loop and save projects data to DB
     const projects = await Project.find({});
+
+    // Cache the result
+    await client.set('projects', JSON.stringify(projects), {
+      EX: 3600, // Set an expiry for the cache, e.g., 1 hour
+    });
+
     res.status(200).json({ projects });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json({ message: 'Internal server error' });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
 };
 
 const get_single_project = async (req, res) => {
   try {
     const project = await Project.findById(req.params.id);
+    await client.set(`${project._id}`, JSON.stringify(project), {
+      EX: 3600,
+    });
     res.status(200).json({ project });
   } catch (err) {
     console.log(err);
