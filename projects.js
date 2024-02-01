@@ -1,18 +1,5 @@
 const data = [
   {
-    id: 0,
-    title: 'Mnemonics - (WIP)',
-    tagline: 'Mnemonics Web App',
-    description:
-      'designed to help you create memorable mnemonic phrases instantly. Whether you need a secure and unique password, a creative learning aid, or a personalized memory jogger, this project has you covered. Enjoy the convenience of generating customized mnemonics on the fly, making it easier than ever to remember important information effortlessly.',
-    liveURL: 'https://mnemonics-generator.netlify.app/',
-    githubURL: 'https://github.com/abdullah43577/mnemonics',
-    techStacks: ['React', 'Redux Toolkit', 'TailwindCSS', 'NodeJS'],
-    logo: 'https://res.cloudinary.com/dpmyh7ucr/image/upload/v1703949352/Screenshot_2023-12-30_161143_l2mvid.png',
-    screenshot: 'https://res.cloudinary.com/dpmyh7ucr/image/upload/v1703949275/screencapture-localhost-5173-2023-12-30-16_12_45_emzela.png',
-  },
-
-  {
     id: 1,
     title: 'Flicks on Demand',
     tagline: 'Movie Entertainment Web App',
@@ -22,6 +9,19 @@ const data = [
     techStacks: ['React', 'Sass', 'TailwindCSS', 'NodeJS'],
     logo: 'https://res.cloudinary.com/dpmyh7ucr/image/upload/v1702052438/movie_logo_xndwf0.jpg',
     screenshot: 'https://res.cloudinary.com/dpmyh7ucr/image/upload/v1702052261/Screenshot_2023-12-08_171714_ftekcr.png',
+  },
+
+  {
+    id: 2,
+    title: 'Estatein',
+    tagline: 'Real Estate Business Website',
+    description:
+      'Estatein is a real estate website offering a sneak peek into my web development skills. While not fully interactive due to API limitations, the UI is elegantly designed to provide a seamless browsing experience. Explore our listings and kickstart your journey to find the perfect property that resonates with your dreams..',
+    liveURL: 'https://real-estate-business-website.vercel.app/',
+    githubURL: 'https://github.com/abdullah43577/Real_Estate_Business_Website',
+    techStacks: ['NextJS', 'TailwindCSS', 'TypeScript'],
+    logo: 'https://res.cloudinary.com/dpmyh7ucr/image/upload/v1706822087/estate_logo_e3f77p.svg',
+    screenshot: 'https://res.cloudinary.com/dpmyh7ucr/image/upload/v1706822105/Screenshot_2024-02-01_221316_cn9kor.png',
   },
 
   {
@@ -97,6 +97,19 @@ const data = [
     techStacks: ['HTML', 'JS', 'SASS'],
     logo: 'https://res.cloudinary.com/dpmyh7ucr/image/upload/v1702053694/calc_xem74a.png',
     screenshot: 'https://res.cloudinary.com/dpmyh7ucr/image/upload/v1702053667/Screenshot_2023-12-08_174023_k6h2u5.png',
+  },
+
+  {
+    id: 8,
+    title: 'Mnemonics - (WIP)',
+    tagline: 'Mnemonics Web App',
+    description:
+      'designed to help you create memorable mnemonic phrases instantly. Whether you need a secure and unique password, a creative learning aid, or a personalized memory jogger, this project has you covered. Enjoy the convenience of generating customized mnemonics on the fly, making it easier than ever to remember important information effortlessly.',
+    liveURL: 'https://mnemonics-generator.netlify.app/',
+    githubURL: 'https://github.com/abdullah43577/mnemonics',
+    techStacks: ['React', 'Redux Toolkit', 'TailwindCSS', 'NodeJS'],
+    logo: 'https://res.cloudinary.com/dpmyh7ucr/image/upload/v1703949352/Screenshot_2023-12-30_161143_l2mvid.png',
+    screenshot: 'https://res.cloudinary.com/dpmyh7ucr/image/upload/v1703949275/screencapture-localhost-5173-2023-12-30-16_12_45_emzela.png',
   },
 ];
 

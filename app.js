@@ -6,7 +6,6 @@ const cors = require('cors');
 const PORT = process.env.PORT || 5000;
 const router = require('./routes/router');
 const { PASSWORD } = process.env;
-const compression = require('compression');
 
 const app = express();
 
@@ -18,25 +17,13 @@ app.use(
     origin: ['http://localhost:3000', 'https://ayooladev.netlify.app'],
     credentials: true,
   })
-); // allows requests from all origins
-app.use(
-  compression({
-    level: 6,
-    threshold: 0, // only compresses data if the byte size is greater than this value
-    filter: (req, res) => {
-      if (req.headers['x-no-compression']) {
-        return false;
-      }
-      return compression.filter(req, res);
-    },
-  })
 );
 
 const dbURI = `mongodb+srv://officialayo540:${PASSWORD}@portfoliocluster.fk9auvg.mongodb.net/portfolio_projects`;
 
 (async function () {
   try {
-    await mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true });
+    await mongoose.connect(dbURI);
     app.listen(PORT, () => console.log(`server started on http://localhost:${PORT}`));
   } catch (err) {
     console.log('mongodb not connected', err);
