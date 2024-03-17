@@ -6,7 +6,7 @@ const data = [
     description: 'Explore the world of movies and TV shows with my captivating web app. Find, discover, and enjoy your favorite titles with ease. Sharpening my React skills while creating an immersive experience for movie enthusiasts.',
     liveURL: 'https://flicksondemand.netlify.app/',
     githubURL: 'https://github.com/abdullah43577/Movie-Entertainment-WebApp',
-    techStacks: ['React', 'Sass', 'TailwindCSS', 'NodeJS'],
+    techStacks: ['React', 'Sass', 'TailwindCSS'],
     logo: 'https://res.cloudinary.com/dpmyh7ucr/image/upload/v1702052438/movie_logo_xndwf0.jpg',
     screenshot: 'https://res.cloudinary.com/dpmyh7ucr/image/upload/v1702052261/Screenshot_2023-12-08_171714_ftekcr.png',
   },
