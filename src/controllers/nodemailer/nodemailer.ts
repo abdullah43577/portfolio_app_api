@@ -17,10 +17,11 @@ const transporter = nodemailer.createTransport({
 export async function transportMail(formData: Email) {
   try {
     const info = await transporter.sendMail({
-      from: `<${formData.firstName} /> 👻" <${formData.email}>`,
+      from: `${formData.firstName}`,
       to: 'officialayo540@gmail.com',
       subject: 'Job Alert! ✅',
       html: getHtml(formData),
+      replyTo: `${formData.email}`,
     });
 
     return info;
